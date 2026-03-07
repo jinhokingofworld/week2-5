@@ -42,13 +42,22 @@ def rotate_matrix_90(matrix):
         회전된 2차원 리스트
     """
     n = len(matrix)
-    
+    newMatrix = []
     # TODO: n x n 크기의 새로운 배열을 생성하세요 (0으로 초기화)
-    pass
+    for a in range(n):
+        temp = []
+        for b in range(n):
+            temp.append(0)
+        newMatrix.append(temp)
+        temp.clear()
+
         
     # TODO: 원본 배열의 각 요소를 회전된 위치에 배치하세요
     # 힌트: (i, j) 위치의 요소는 회전 후 (j, n-1-i) 위치로 이동
-    pass
+    for a in range(n):
+        for b in range(n):
+    
+
     
     return rotated
 
