@@ -60,7 +60,8 @@ def rotate_matrix_90(matrix):
         temp = []
         for j in range(n):
             temp.append(matrix[j][i])
-        newMatrix[i].append(temp)
+        temp.reverse()
+        newMatrix[i] = temp
 
     return newMatrix
 

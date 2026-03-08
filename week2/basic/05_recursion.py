@@ -37,7 +37,7 @@ def factorial(n):
     # TODO: recursive case를 작성하세요
     match n:
         case 0:
-            return 0
+            return 1
         case 1:
             return 1
         case _:
