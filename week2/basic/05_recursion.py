@@ -41,8 +41,7 @@ def factorial(n):
         case 1:
             return 1
         case _:
-            temp = n * factorial(n-1)
-            return temp
+            return n * factorial(n-1)
 
 def fibonacci(n):
     """
@@ -62,7 +61,8 @@ def fibonacci(n):
             return 0
         case 1:
             return 1
-        case _: return fibonacci(n-1) + fibonacci(n-2)
+        case _: 
+            return fibonacci(n-1) + fibonacci(n-2)
 
 # 테스트 케이스
 if __name__ == "__main__":
