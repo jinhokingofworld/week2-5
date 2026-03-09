@@ -107,7 +107,7 @@ def extended_gcd(a, b):
     # 유클리드 나눗셈 a%b = a - (a//b)*b 위에 대입
     # 나오는 결과 a*y1 + b*(x1 - (a//b)*y1) = g
     # ax + by = g 형태를 얻어야 하기 때문에
-    # x = y1 / y = (x1 - (a//b)*y1)
+    # x = y1 // y = (x1 - (a//b)*y1)
     x = y1
     y = x1 - (a // b) * y1
 
@@ -130,11 +130,11 @@ def is_prime(n):
     if n < 2:
         return False
     
+    # int(math.sqrt(n))은 의미 없어 보일 수 있지만, 의미가 있다!!
+    # 20 = 4 × 5 -> √20 ≈ 4.47
+    # 4 ≤ √20 ≤ 5 이기 때문에 √n 이하만 검사하면 반드시 하나는 걸린다.
+
     for i in range(2, int(math.sqrt(n)) + 1):
-        if n % i == 0:
-            return False
-        
-    for i in range(3, int(math.sqrt(n)) + 1, 2):
         if n % i == 0:
             return False
         
