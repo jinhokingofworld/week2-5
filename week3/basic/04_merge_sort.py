@@ -66,16 +66,16 @@ def merge_sort_helper(arr, left, right):
         left: 시작 인덱스
         right: 끝 인덱스
     """
-    # TODO: base case - left가 right보다 작을 때만 정렬
-    if left < right:
-        ## 중간 지점 계산
-        mid = (left + right) //2
-        ## 왼쪽 절반 재귀 정렬
-        merge_sort_helper(arr, left, mid)
-        ## 오른쪽 절반 재귀 정렬
-        merge_sort_helper(arr, mid+1, right)
-        ## 정렬된 두 절반을 병합
-        merge(arr, left, mid, right)
+    if left >= right:
+        return
+    ## 중간 지점 계산
+    mid = (left + right) //2
+    ## 왼쪽 절반 재귀 정렬
+    merge_sort_helper(arr, left, mid)
+    ## 오른쪽 절반 재귀 정렬
+    merge_sort_helper(arr, mid+1, right)
+    ## 정렬된 두 절반을 병합
+    merge(arr, left, mid, right)
 
 def merge_sort(arr):
     """
