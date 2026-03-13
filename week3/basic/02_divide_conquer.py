@@ -72,5 +72,5 @@ if __name__ == "__main__":
     result3 = find_max_divide_conquer(arr3, 0, len(arr3) - 1)
     print(f"배열: {arr3}")
     print(f"최댓값: {result3}")
-
+    
 
