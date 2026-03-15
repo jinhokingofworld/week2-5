@@ -7,13 +7,3 @@
 # 하나는 1을 더하고, 하나는 1을 빼는 것을 반복해서 두 수 모두 소수가 되면 프린트
 
 # 6 = 3+3 / 4 = 2+2
-
-def sosu():
-    result = str()
-    
-    print(result)
-
-
-n = int(input())
-for i in range(n):
-    sosu()
