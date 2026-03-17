@@ -79,6 +79,7 @@ if '::' not in s:
 
 # :: 있는 경우
 else:
+    #split을 한 결과는 list이지만, left와 right에는 문자열이 들어감
     left, right = s.split('::')
 
     left_parts = left.split(':') if left else []
