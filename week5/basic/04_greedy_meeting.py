@@ -21,6 +21,7 @@
 - 종료 시간이 빠른 회의부터 선택!
 - 이전 회의가 끝난 후에 시작하는 회의만 선택
 """
+import heapq
 
 def select_meetings(meetings):
     """
@@ -33,19 +34,31 @@ def select_meetings(meetings):
         (배정된 회의 개수, 선택된 회의 리스트)
     """
     # TODO: 회의가 없으면 0 반환
-    pass
+    if len(meetings) == 0:
+        return
     
     # TODO: 종료 시간 기준으로 정렬
-    pass
+    #우선순위 큐 사용하면 지릴 것 같음 !!!
     
+    h = []
+    heapq.heapify(h)
+
+    for i in meetings:
+        heapq.heappush(h, (i[1], i[0]))
+
     selected = []
     
     # TODO: 첫 번째 회의 선택
-    pass
-    
+    i = heapq.heappop(h)
+    selected.append((i[1],i[0]))
+
     # TODO: 나머지 회의들 확인
     ## 이전 회의가 끝난 후 시작하는 회의만 선택
-    pass
+    while h:
+        j = heapq.heappop(h)
+        #선택된 마지막 회의의 끝나는 시간보다 시작시간이 큰 게 들어감
+        if selected[-1][1] < j[1]:
+            selected.append((j[1], j[0]))
     
     return len(selected), selected
 
