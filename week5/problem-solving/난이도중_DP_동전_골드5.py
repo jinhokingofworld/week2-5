@@ -12,7 +12,9 @@ for _ in range(testcase):
     dp = [0] * (target+1)
     dp[0] = 1
 
+    # 코인 종류마다 반복
     for coin in coins:
+        #해당 코인을 사용하여 만들 수 있는 종류의 수 더하기
         for money in range(coin, target + 1):
             dp[money] += dp[money - coin]
     
