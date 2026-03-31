@@ -66,7 +66,7 @@ def merge_sort_helper(arr, left, right):
         left: 시작 인덱스
         right: 끝 인덱스
     """
-    if left >= right:
+    if left == right:
         return
     ## 중간 지점 계산
     mid = (left + right) //2
